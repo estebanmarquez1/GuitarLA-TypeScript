@@ -1,2 +1,2 @@
 # GuitarLA TypeScript
-Este es un proyecto, que estoy migrando a typescript.
+This is a project that i'm migrating to TypeScript.
