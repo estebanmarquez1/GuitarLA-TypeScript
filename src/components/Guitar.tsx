@@ -5,7 +5,13 @@ type Guitar = {
     description: string,
     price: number;
 }
-export default function Guitar({item, addToCart} : {item: Guitar, addToCart : (item: Guitar) => void} ) {
+
+type GuitarProps = {
+    item: Guitar, 
+    addToCart : (item: Guitar) => void
+}
+
+export default function Guitar({item, addToCart} : GuitarProps ) {
     const { name, description, image, price} = item
     const formatQuantity = (quantity : number) => {
         return quantity.toLocaleString('en-US', {
