@@ -1,16 +1,8 @@
-type Guitar = {
-    id: number,
-    name: string,
-    image: string,
-    description: string,
-    price: number;
-}
-
+import type { Guitar } from "../types"
 type GuitarProps = {
     item: Guitar, 
     addToCart : (item: Guitar) => void
 }
-
 export default function Guitar({item, addToCart} : GuitarProps ) {
     const { name, description, image, price} = item
     const formatQuantity = (quantity : number) => {
