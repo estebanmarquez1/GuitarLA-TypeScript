@@ -1,6 +1,13 @@
-export default function Guitar({item, addToCart}) {
-    const {id, name, description, image, price} = item
-    const formatQuantity = (quantity) => {
+type Guitar = {
+    id: number,
+    name: string,
+    image: string,
+    description: string,
+    price: number;
+}
+export default function Guitar({item, addToCart} : {item: Guitar, addToCart : (item: Guitar) => void} ) {
+    const { name, description, image, price} = item
+    const formatQuantity = (quantity : number) => {
         return quantity.toLocaleString('en-US', {
          style: 'currency',
          currency: 'USD'
